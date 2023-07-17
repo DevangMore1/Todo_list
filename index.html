@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TO-DO LIST</title>
+</head>
+<body>
+    <div>
+        <label for="role">Role:</label>
+        <select id="role" onchange="switchRole()">
+          <option value="developer">Developer</option>
+          <option value="tester">Tester</option>
+        </select>
+      </div>
+    <div class="modal" id="todo_form">
+        <div class="header">
+          <div class="title">Ticket window</div>
+          <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <input type="text" id="todo_title" placeholder="ENTER YOUR TITLE">
+            <input type="date" id="todo_date">
+            <input type="text" id="todo_desc" placeholder="Add Your description here" />
+            <input type="submit" value="Add Todo" id="todo_submit" />
+        </div>
+      </div>
+
+    <!-- <div class="modal">
+        <div class="header">
+            <div class="title">Create Todo Item</div>
+            <btm class="close_modal">&times;</btm>
+        </div>
+        <div class="body">
+            <input type="text" id="todo_input">
+        </div>
+    </div> -->
+
+
+
+
+    <div class="todo_container">
+        <div class="level" id="todo_list">
+            <h1>To Do</h1>
+            <button id="add_btn" data-target-modal="#todo_form">+ Add ToDo</button>
+            <div class="todo" draggable="true"> 
+                <span class="close">&times;</span>
+                <div class="info">
+                    <div class="header_todo">
+                        New Ticket
+                    </div>
+                    <div class="desc">
+                    Your ticket description here
+                    </div>
+                    <div class="date"> 2023-05-04</div>
+                </div>
+            </div>
+        </div>
+        <div class="level" id="inDev">
+            <h1>In Dev</h1>
+        </div>
+        <div class="level" id="inTesting">
+            <h1>In Testing</h1>
+        </div>
+        <div class="level" id="done">
+            <h1>Done</h1>
+        </div>
+    </div>
+
+    <div id="overlay"></div>
+    <script src="script.js"></script>
+
+</body>
+</html>
