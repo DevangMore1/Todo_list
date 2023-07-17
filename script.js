@@ -15,6 +15,7 @@ todos.forEach((todo)=>{
 
 function dragstart(){
     draggableTodo= this;
+    console.log(this);
 }
 function dragend(){
     draggableTodo= null;

@@ -73,6 +73,7 @@ body{
   justify-content: space-between;
   align-items: center;
   width: 120px;
+  
 }
 
 .desc{
@@ -116,10 +117,11 @@ body{
     border-radius: 10px;
     z-index: 2;
     background-color: #fff;
+    padding: 20px;
   }
   
   .modal.active {
-    top: 15%;
+    top: 30%;
   }
   
   .modal .header {
@@ -151,11 +153,18 @@ body{
 #todo_desc{
   height: 100px;
 }
- #todo_desc,
+#todo_title,
+#todo_date{
+  padding: 0.5rem 1rem;
+  width: 50%;
+  margin-top: 20px;
+} 
+#todo_desc,
 #todo_submit {
   padding: 0.5rem 1rem;
   width: 100%;
-  margin: 0.25rem;
+  margin-top: 20px;
+  /* margin: 0.25rem; */
 }
 
 #todo_submit {
