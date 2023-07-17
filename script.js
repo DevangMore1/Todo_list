@@ -14,8 +14,14 @@ todos.forEach((todo)=>{
 });
 
 function dragstart(){
+    if(this.parentElement.id == 'todo_list' && currentRole =='developer')
+    {draggableTodo= this;}
+    else if(this.parentElement.id == 'inDev' && currentRole =='developer')
     draggableTodo= this;
-    console.log(this);
+    else if(this.parentElement.id == 'inTesting' && currentRole =='tester')
+    draggableTodo= this;
+    
+    // console.log(this);
 }
 function dragend(){
     draggableTodo= null;
@@ -28,7 +34,14 @@ levels.forEach((level)=>{
 })
 
 function dragover(e){
+    // console.log(this);
+    // if(this.id == 'inDev' && currentRole == 'developer')
+    // e.preventDefault();
+    // else if(this.id == 'inTesting' && currentRole == 'developer')
+    // e.preventDefault();
+    // else if(this.id == 'todo' && currentRole == 'developer')
     e.preventDefault();
+
 }
 function dragenter(){
     this.style.border="1px dashed #ccc"
@@ -38,7 +51,7 @@ function dragleave(){
 }
 function drop(){
     this.style.border="none"
-    console.log(this.id);
+    // console.log(this.id);
     if(this.id == 'inDev' && currentRole == 'developer')
     {this.appendChild(draggableTodo)}
     else if(this.id == 'inTesting' && currentRole == 'developer')
