@@ -43,7 +43,7 @@ function drop(){
     {this.appendChild(draggableTodo)}
     else if(this.id == 'inTesting' && currentRole == 'developer')
     {this.appendChild(draggableTodo)}
-    if(this.id == 'done' && currentRole == 'tester')
+    else if(this.id == 'done' && currentRole == 'tester')
     {this.appendChild(draggableTodo)}
 }
 
